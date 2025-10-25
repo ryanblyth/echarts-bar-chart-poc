@@ -1,0 +1,109 @@
+/* Responsive chart container */
+:root {
+  --chart-height: 60vh;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.chart-container {
+  width: 100%;
+  height: var(--chart-height);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#echarts-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Scroll sections for ScrollTrigger */
+.scroll-intro-section,
+.scroll-outro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.pin-section {
+  min-height: 120vh;
+}
+
+/* Mobile styles - consolidated for screens ≤480px */
+@media (max-width: 480px) {
+  :root {
+    --chart-height: 70vh;
+  }
+  
+  .chart-container {
+    padding: 12px;
+  }
+  
+  /* === Mobile Horizontal Scroll (Default) === */
+  .chart-container {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .chart-container #echarts-container {
+    width: 480px;
+    min-width: 480px;
+    height: 400px;
+  }
+  
+  /* === Mobile Horizontal Scroll (Disabled) === */
+  .chart-container.no-horizontal-mobile-scroll {
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+  
+  .chart-container.no-horizontal-mobile-scroll #echarts-container {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Scroll indicator - subtle but visible */
+.scroll-indicator {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  display: none;
+  visibility: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+/* Show scroll indicator when scrollable on mobile */
+@media (max-width: 480px) {
+  .chart-container:not(.no-horizontal-mobile-scroll) .scroll-indicator {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}

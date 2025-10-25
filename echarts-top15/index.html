@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorado Top 15 Cities - ECharts</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    
+    <!-- GSAP and ScrollTrigger - loaded conditionally -->
+    <script>
+      // Check if ScrollTrigger should be enabled after DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        const enableScrollTrigger = document.body.classList.contains('scrolltrigger-enabled') || 
+                                    window.location.search.includes('scrolltrigger=true');
+        
+        if (enableScrollTrigger) {
+          console.log('ScrollTrigger enabled - loading GSAP and ScrollTrigger');
+          // Load GSAP core
+          const gsapScript = document.createElement('script');
+          gsapScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js';
+          gsapScript.onload = () => {
+            // Load ScrollTrigger after GSAP
+            const stScript = document.createElement('script');
+            stScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js';
+            stScript.onload = () => {
+              // Register ScrollTrigger plugin
+              gsap.registerPlugin(ScrollTrigger);
+              console.log('ScrollTrigger loaded and ready');
+            };
+            document.head.appendChild(stScript);
+          };
+          document.head.appendChild(gsapScript);
+        }
+      });
+    </script>
+  </head>
+  <body class="scrolltrigger-enabled">
+    <section class="pin-section">
+      <div class="chart-container">
+        <h1>Colorado Top 15 Cities</h1>
+        <div class="scroll-indicator">← Scroll to see more →</div>
+        <div id="echarts-container"></div>
+      </div>
+    </section>
+
+    <section class="scroll-outro-section">
+      <div>
+        <p>End of chart. Keep scrolling for more content.</p>
+      </div>
+    </section>
+    <script type="module" src="/src/main-echarts.js"></script>
+  </body>
+</html>
