@@ -1,0 +1,265 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08031",
+        "NAME": "Denver",
+        "pop": 715522,
+        "density": 4689.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.9903, 39.7392]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08035",
+        "NAME": "Colorado Springs",
+        "pop": 478961,
+        "density": 2356.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.8214, 38.8339]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08069",
+        "NAME": "Aurora",
+        "pop": 386261,
+        "density": 1892.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.8319, 39.7294]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08013",
+        "NAME": "Boulder",
+        "pop": 108250,
+        "density": 3987.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.2705, 40.0150]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08014",
+        "NAME": "Broomfield",
+        "pop": 74112,
+        "density": 1235.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.0867, 39.9205]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08041",
+        "NAME": "Fort Collins",
+        "pop": 169810,
+        "density": 2847.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.0844, 40.5853]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08001",
+        "NAME": "Arvada",
+        "pop": 124402,
+        "density": 2156.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.0875, 39.8028]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08077",
+        "NAME": "Lakewood",
+        "pop": 155984,
+        "density": 3124.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.0817, 39.7047]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08053",
+        "NAME": "Thornton",
+        "pop": 141867,
+        "density": 2847.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.9842, 39.8680]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08015",
+        "NAME": "Westminster",
+        "pop": 116317,
+        "density": 2896.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.0372, 39.8367]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08005",
+        "NAME": "Boulder",
+        "pop": 108250,
+        "density": 3987.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.2705, 40.0150]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08019",
+        "NAME": "Centennial",
+        "pop": 108418,
+        "density": 2847.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.8019, 39.5803]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08025",
+        "NAME": "Greeley",
+        "pop": 108795,
+        "density": 2156.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.7092, 40.4233]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08039",
+        "NAME": "Grand Junction",
+        "pop": 65158,
+        "density": 1235.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-108.5506, 39.0639]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08045",
+        "NAME": "Loveland",
+        "pop": 76001,
+        "density": 1892.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.0747, 40.3978]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08047",
+        "NAME": "Montrose",
+        "pop": 20116,
+        "density": 1235.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-107.8761, 38.4783]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08051",
+        "NAME": "Pueblo",
+        "pop": 111876,
+        "density": 2156.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.6091, 38.2544]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08055",
+        "NAME": "Northglenn",
+        "pop": 38433,
+        "density": 2847.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.9872, 39.8856]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08059",
+        "NAME": "Parker",
+        "pop": 58081,
+        "density": 1235.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.7525, 39.5183]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "08063",
+        "NAME": "Commerce City",
+        "pop": 62553,
+        "density": 1892.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.7878, 39.8083]
+      }
+    }
+  ]
+}
