@@ -1,6 +1,7 @@
 // main-echarts.js
 import { createTop15Chart } from "./echarts/buildChart.js";
 import { enableScrollTrigger, disableScrollTrigger, toggleScrollTrigger, isScrollTriggerAvailable } from './scroll/scrolltrigger-echarts.js';
+import { initMobileFeatures } from './utils/mobile.js';
 
 /**
  * Main application entry point
@@ -33,6 +34,9 @@ class ColoradoCitiesChart {
       // Setup event listeners
       this.setupEventListeners();
       
+      // Initialize mobile features
+      initMobileFeatures();
+      
       // Initialize ScrollTrigger if enabled
       this.initScrollTrigger();
       
@@ -45,7 +49,7 @@ class ColoradoCitiesChart {
 
   async loadData() {
     try {
-      const response = await fetch('/data/colorado-cities-enriched.geojson');
+      const response = await fetch('../data/colorado-cities-enriched.geojson');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
