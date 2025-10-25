@@ -1,0 +1,34 @@
+version: 1
+name: scrolltrigger-animations-echarts
+goal: >
+  Add optional ScrollTrigger-powered scrubbing for the bar reveal while keeping
+  ECharts built-in animations for normal loads and updates.
+  ScrollTrigger is used only for scroll-driven effects (pin/scrub); it does not replace base animations.
+
+constraints:
+  - Do not modify base ECharts animation config for initial draw/update.
+  - Load ScrollTrigger via CDN (GSAP core + ScrollTrigger) only when scrubbing is enabled.
+  - Keep ScrollTrigger code in a separate module `src/scroll/scrolltrigger-echarts.js`.
+  - Provide CSS class and JS function toggles to enable/disable scrubbing and pinning.
+  - Avoid heavy per-frame work; prefer updating series data from a cached array multiplied by progress.
+  - Ensure accessibility is not degraded when scrubbing is enabled.
+
+implementation_notes:
+  - Maintain `originalData` array and `maxValue` computed at chart initialization.
+  - When scrubbing is enabled, initialize bars at 0 values and pin the chart section.
+  - On ScrollTrigger update, compute `progress` (0..1), then setOption with `data = originalData.map(v => v * progress)`.
+  - Force x/y axis max to `maxValue` to avoid re-scaling during scroll.
+  - Use `chart.setOption({ series: [{ data }] }, { lazyUpdate: true, notMerge: false, silent: true })` to keep interactions responsive.
+  - Provide a fallback using IntersectionObserver to trigger a one-time grow animation if ScrollTrigger is absent.
+
+deliverables:
+  - src/scroll/scrolltrigger-echarts.js (registers handlers, wires GSAP ScrollTrigger to update data by `progress`).
+  - updates to index.html to conditionally include GSAP via script tags when a CSS class or build flag is present.
+  - README section describing how to enable scrubbing without affecting the default animation path.
+
+success_criteria:
+  - Default (no ScrollTrigger): smooth built-in ECharts animations only.
+  - With scrubbing enabled: scroll controls the reveal with pinning; no jank; tooltips remain correct.
+  - Easy to enable/disable via CSS/JS without code changes to the base chart.
+
+
